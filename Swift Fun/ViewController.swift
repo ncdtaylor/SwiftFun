@@ -3,7 +3,7 @@
 //  Swift Fun
 //
 //  Created by Nick Taylor on 05/11/2017.
-//  Copyright © 2017 Taylor Made Solutions. All rights reserved.
+//  Copyright © 2017 Taylor Made Solutions. All rights reserved..
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBAction func myButton(_ sender: Any) {
         
         buttonCount = buttonCount+1
-        print(buttonCount)
+
         if buttonCount >= 10 {
             myLabel.text = "You hit me more than 10 times!"
             view.backgroundColor=UIColor.red
