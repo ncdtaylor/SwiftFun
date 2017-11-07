@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,18 +32,48 @@
                                     <action selector="myButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIY-3i-Njp"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-N3-Am6">
+                                <rect key="frame" x="137.5" y="269.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ikw-yY-lxt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-QG-iMs">
+                                <rect key="frame" x="137.5" y="219.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="dK3-11-S0G"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkv-N3-Jen">
+                                <rect key="frame" x="163" y="183" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ppz-to-yO0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2bo-Hk-PZt"/>
+                            <constraint firstItem="XKJ-N3-Am6" firstAttribute="firstBaseline" secondItem="XTW-QG-iMs" secondAttribute="baseline" constant="50" id="7Qg-he-nhu"/>
+                            <constraint firstItem="XTW-QG-iMs" firstAttribute="firstBaseline" secondItem="Nkv-N3-Jen" secondAttribute="baseline" constant="25" id="9eQ-qW-u3I"/>
                             <constraint firstItem="sc1-hY-Kqt" firstAttribute="top" secondItem="Ppz-to-yO0" secondAttribute="bottom" constant="20" id="Afn-id-uV2"/>
                             <constraint firstItem="Ppz-to-yO0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Be3-Xx-lXf"/>
                             <constraint firstItem="sc1-hY-Kqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZf-Pk-NYR"/>
+                            <constraint firstItem="Nkv-N3-Jen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PlO-Jp-MmJ"/>
+                            <constraint firstItem="XKJ-N3-Am6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6L-8C-XT7"/>
+                            <constraint firstItem="XTW-QG-iMs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SP8-Xn-VOh"/>
+                            <constraint firstItem="Ppz-to-yO0" firstAttribute="firstBaseline" secondItem="XKJ-N3-Am6" secondAttribute="baseline" constant="50" id="dWg-Ih-Lxa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="Nkv-N3-Jen" id="e1E-0g-sUU"/>
+                        <outlet property="bottomTextField" destination="XKJ-N3-Am6" id="wer-6L-aYN"/>
                         <outlet property="myLabel" destination="Ppz-to-yO0" id="my1-sU-UH5"/>
+                        <outlet property="topTextField" destination="XTW-QG-iMs" id="teL-Nu-j3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
